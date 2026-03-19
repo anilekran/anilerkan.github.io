@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Halic Coffee</title>
+  <link rel="stylesheet" href="css/styles1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <style>/* Services Section */
+.services-section {
+  padding: 100px;
+  background-image: url('img/banner.jpg'); /* Arka plan görseli */
+  background-size: cover;
+  background-position: center;
+  color: #005700;
+  
+}
+
+.services-section h1 {
+  font-size: 3rem;
+  color: #006400;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  flex: 0 0 100%; /* Single slide size */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  font-size: 1.5rem;
+  color: #006400;
+  margin-bottom: 10px;
+}
+
+.slider-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Slider Controls */
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.slider-button {
+  padding: 10px 20px;
+  background-color: #228b22;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  background-color: #2e8b57;
+}
+</style>
+  <script>
+    // Slider Functionality
+    function initSlider(sliderId) {
+      const track = document.getElementById(sliderId + "-track");
+      const items = document.querySelectorAll(`#${sliderId}-track .slider-item`);
+      const prevButton = document.getElementById(sliderId + "-prev");
+      const nextButton = document.getElementById(sliderId + "-next");
+
+      let index = 0;
+
+      function updateSlider() {
+        const itemWidth = items[0].clientWidth;
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        index = (index > 0) ? index - 1 : items.length - 1;
+        updateSlider();
+      });
+
+      nextButton.addEventListener("click", () => {
+        index = (index < items.length - 1) ? index + 1 : 0;
+        updateSlider();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initSlider("coffee");
+      initSlider("dessert");
+    });
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Haliç Üniversitesi Logosu">
+        </a>
+      </li>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+      <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button type="button">Search</button>
+    </div>
+    <div><li class="social-media">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </li></div>
+  </nav>
+
+  <section class="services-section" id="services">
+    <h1>Our Services</h1>
+    <h2>Coffee's</h2>
+    <div class="slider-container" id="coffee-slider">
+      <div class="slider-track" id="coffee-track">
+        <div class="slider-item">
+          <img src="img/espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>Rich and bold, the perfect shot.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Perfectly frothed with a touch of milk.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/latte.jpg" alt="Latte">
+          <h3>Latte</h3>
+          <p>Milky and smooth for any time of the day.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/americano.jpg" alt="Americano">
+          <h3>Americano</h3>
+          <p>Simple and satisfying.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/mocha.jpg" alt="Mocha">
+          <h3>Mocha</h3>
+          <p>A chocolate lover's delight.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/macchiato.jpg" alt="Macchiato">
+          <h3>Macchiato</h3>
+          <p>Espresso with a touch of milk foam.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/flatwhite.jpg" alt="Flat White">
+          <h3>Flat White</h3>
+          <p>Balanced espresso and milk.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/coldbrew.jpg" alt="Cold Brew">
+          <h3>Cold Brew</h3>
+          <p>Smooth and refreshing, perfect for hot days.</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-button" id="coffee-prev">Previous</button>
+        <button class="slider-button" id="coffee-next">Next</button>
+      </div>
+    </div>
+
+    <h2>Dessert's</h2>
+    <div class="slider-container" id="dessert-slider">
+      <div class="slider-track" id="dessert-track">
+        <div class="slider-item">
+          <img src="img/brownie.jpg" alt="Brownie">
+          <h3>Brownie</h3>
+          <p>Rich and gooey chocolate treat.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/cheesecake.jpg" alt="Cheesecake">
+          <h3>Cheesecake</h3>
+          <p>Creamy and tangy perfection.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/muffin.jpg" alt="Muffin">
+          <h3>Muffin</h3>
+          <p>Soft and fluffy with various flavors.</p>
+        </div>
+        <div class="slider-item">
+          <img src="img/cookie.jpg" alt="Cookie">
+          <h3>Cookie</h3>
+          <p>Crispy edges, chewy center.</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-button" id="dessert-prev">Previous</button>
+        <button class="slider-button" id="dessert-next">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Halic Coffee. All rights reserved.</p>
+  </footer>
+</body>
+</html>

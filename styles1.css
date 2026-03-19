@@ -1,0 +1,403 @@
+/* General settings */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5deb3; /* Light brown */
+  color: #333;
+}
+
+
+/* Navbar settings */
+.navbar {
+  background-color: #006400; /* dark green */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo a img {
+  height: 60px;
+  width: 60px;
+  
+  transition: transform 0.3s; /* A small visual effect for clicking */
+}
+
+.navbar .logo a img:hover {
+  transform: scale(1.1); /* Magnification effect on hover */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #228b22; /* light green */
+}
+
+
+
+/* Social media icons */
+.navbar .social-media {
+  display: flex;
+  gap: 15px;
+  margin-left: 200px; 
+}
+
+.navbar .social-media a {
+  color: white; 
+  font-size: 1rem; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .social-media a:hover {
+  color: #228b22; 
+}
+
+.navbar .social-media a i {
+  font-size: 1.5rem;
+}
+
+/* search-bar settings */
+
+.search-bar {
+  flex-grow: 1; /* Fill the field to center */
+  display: flex;
+  justify-content: center; /* center */
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #228b22; /* light green */
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #2e8b57; /* dark green */
+}
+
+
+
+
+
+/* Home Section settings */
+
+.home-section {
+  height: 67vh; /* screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('img/banner.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  text-align: center;
+  color: #006400; 
+}
+
+.home-section h1, .home-section p {
+  
+}
+
+.home-section h1 {
+  font-size: 3rem; /* Large title */
+  margin: 0;
+}
+
+.home-section p {
+  font-size: 1.5rem; 
+  margin: 10px 0 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* homepage about section settings */
+  #about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #ffecc9;
+
+  }
+
+  #about .about-text {
+    flex: 1;
+    padding-left: 100px;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1;
+    max-width: 800px;
+  }
+
+  #about .about-image {
+    flex: 0 0 800px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .about-image img {
+    max-width: 100%;
+    height: 120;
+    border-radius: 5px;
+    
+
+  }
+
+.about-image a img {
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.about-image a img:hover {
+  transform: scale(1.01); /* Hafif büyütme efekti */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Services section settings */
+#services1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f8deaf; /* Light cream background */
+}
+
+#services1 .services1-text {
+  flex: 1;
+  padding-left: 200px; /* Distance to image */
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+#services1 .services1-image {
+    flex: 0 0 800px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#services1 .services1-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.services1-image a img {
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.services1-image a img:hover {
+  transform: scale(1.01); /* Slight magnification effect  */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+
+
+
+
+/* Contact section settings */
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f2d39c; /* Light cream background */
+}
+
+#contact .contact-text {
+  flex: 1;
+  padding-left: 100px; /* Distance to image */
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+#contact .contact-image {
+    flex: 0 0 800px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .contact-image img {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.contact-image a img {
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.contact-image a img:hover {
+  transform: scale(1.01); /* Slight magnification effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  section settings */
+
+section {
+  padding: 150px;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background-color: #fff8dc; /* Daha açık bir ton */
+}
+
+
+
+
+
+
+
+/* Footer settings */
+
+.footer {
+  background-color: #006400; /* Navbar ile aynı koyu yeşil renk */
+  color: white; /* Yazı rengi beyaz */
+  text-align: center; /* Metni ortala */
+  padding: 10px; /* İçerik etrafında biraz boşluk */
+  position: relative;
+  bottom: 0;
+  width: 98.9%;
+  font-size: 1rem; /* Yazı boyutunu ayarlama */
+}
+
+
+
+
+
+
+/* Contact form settings */
+.contact-section {
+  padding: 100px;
+  text-align: center;
+  background-color: #fff8dc;
+  background-image: url('img/banner.jpg'); /* Arka plan fotoğrafı */
+  background-size: cover; /* Resmi tüm alana yay */
+  background-position: center; /* Görseli ortala */
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+  color: #006400;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #006400;
+}
+
+.contact-form button {
+  background-color: #228b22;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form button:hover {
+  background-color: #2e8b57;
+}
+
+
+/* Harita settings */
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
